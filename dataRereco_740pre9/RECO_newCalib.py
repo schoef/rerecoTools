@@ -66,7 +66,12 @@ process.GlobalTag.toGet.append(
            connect = cms.untracked.string("sqlite_file:PFCalibration.db")
            )
 )
-
+process.GlobalTag.toGet.append(
+  cms.PSet(record = cms.string("PFCalibrationRcd"),
+           tag = cms.string("PFCalibration"),
+           connect = cms.untracked.string("sqlite_file:PFCalibration.db")
+           )
+)
 # Path and EndPath definitions
 process.raw2digi_step = cms.Path(process.RawToDigi)
 process.reconstruction_step = cms.Path(process.reconstruction)

@@ -8,6 +8,7 @@ config = Configuration()
 
 
 config.section_("General")
+#config.General.requestName   = 'JetHT_CMSSW_7_4_0_pre9_ROOT6-GR_R_74_V8_1Apr_RelVal_jht2012D-v1_oldCalib_AOD'
 config.General.requestName = "DoubleMuParked_CMSSW_7_4_0_pre9_ROOT6-GR_R_74_V8_1Apr_RelVal_dm2012D-v2_oldCalib_AOD"
 config.General.workArea = "reReco"
 config.General.transferOutputs = True #whether to transfer
