@@ -1,0 +1,8 @@
+datasets_50ns=[
+'/RelValZMM_13/schoef-crab_RelValZMM_13_CMSSW_7_4_0_pre9-PU50ns_MCRUN2_74_V6-v1_MVA_OFF-51372da6ee603330419a1de64f95c5dc/USER',
+'/RelValZMM_13/schoef-crab_RelValZMM_13_CMSSW_7_4_0_pre9-PU50ns_MCRUN2_74_V6-v1_MVA_ON-2c3d09f9ab23f307a4d661ebb9d909a5/USER'
+]
+datasets_25ns=[
+'/RelValZMM_13/schoef-crab_RelValZMM_13_CMSSW_7_4_0_pre9-PU25ns_MCRUN2_74_V7-v1_MVA_OFF-f4c0f844ff9435a395ca7ca394e57eb1/USER',
+'/RelValZMM_13/schoef-crab_RelValZMM_13_CMSSW_7_4_0_pre9-PU25ns_MCRUN2_74_V7-v1_MVA_ON-e47b9d546cd8a1e49818f7305d5760ff/USER'
+]
