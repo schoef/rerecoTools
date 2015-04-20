@@ -20,13 +20,13 @@ process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_condDBv2_cff')
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(1000)
+    input = cms.untracked.int32(10)
 )
 
 # Input source
 process.source = cms.Source("PoolSource",
 #    fileNames = cms.untracked.vstring('file:step3_DIGI2RAW.root'),
-    fileNames = cms.untracked.vstring('root://eoscms.cern.ch//store/relval/CMSSW_7_4_0_pre9_ROOT6/DoubleMuParked/RAW/GR_R_74_V8_1Apr_RelVal_dm2012D-v2/00000/028A41FC-96DB-E411-B586-002618943976.root'),
+    fileNames = cms.untracked.vstring('root://eoscms.cern.ch//store/group/phys_jetmet/schoef/Run2012D_JetHT_RAW_208352.root'),
     secondaryFileNames = cms.untracked.vstring()
 )
 
@@ -51,7 +51,7 @@ process.AODoutput = cms.OutputModule("PoolOutputModule",
         filterName = cms.untracked.string('')
     ),
     eventAutoFlushCompressedSize = cms.untracked.int32(15728640),
-    fileName = cms.untracked.string('step3_RAW2DIGI_RECO.root'),
+    fileName = cms.untracked.string('~/eos/cms/store/group/phys_jetmet/schoef/Run2012D_JetHT_RAW2DIGI_AOD_208352.root'),
     outputCommands = process.AODEventContent.outputCommands
 )
 
@@ -60,12 +60,13 @@ process.AODoutput = cms.OutputModule("PoolOutputModule",
 # Other statements
 from Configuration.AlCa.GlobalTag_condDBv2 import GlobalTag
 process.GlobalTag = GlobalTag(process.GlobalTag, 'GR_R_74_V8', '')
-process.GlobalTag.toGet.append(
-  cms.PSet(record = cms.string("PFCalibrationRcd"),
-           tag = cms.string("PFCalibration"),
-           connect = cms.untracked.string("sqlite_file:PFCalibration.db")
-           )
-)
+#process.GlobalTag.toGet.append(
+#  cms.PSet(record = cms.string("PFCalibrationRcd"),
+#           tag = cms.string("PFCalibration"),
+#           connect = cms.untracked.string("sqlite_file:PFCalibration.db")
+#           )
+#)
+
 # Path and EndPath definitions
 process.raw2digi_step = cms.Path(process.RawToDigi)
 process.reconstruction_step = cms.Path(process.reconstruction)

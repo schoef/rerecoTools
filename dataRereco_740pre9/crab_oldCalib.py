@@ -9,7 +9,7 @@ config = Configuration()
 
 config.section_("General")
 #config.General.requestName   = 'JetHT_CMSSW_7_4_0_pre9_ROOT6-GR_R_74_V8_1Apr_RelVal_jht2012D-v1_oldCalib_AOD'
-config.General.requestName = "DoubleMuParked_CMSSW_7_4_0_pre9_ROOT6-GR_R_74_V8_1Apr_RelVal_dm2012D-v2_oldCalib_AOD"
+config.General.requestName = "DoubleMuParked_CMSSW_7_4_0_pre9_ROOT6-GR_R_74_V8_1Apr_RelVal_dm2012D-v2_oldCalib_MVA_OFF_AOD"
 config.General.workArea = "reReco"
 config.General.transferOutputs = True #whether to transfer
 config.General.transferLogs = False #1MB still available
@@ -26,8 +26,8 @@ config.section_("Data")
 config.Data.publishDBS = 'phys03'
 #config.Data.inputDataset   = '/JetHT/CMSSW_7_4_0_pre9_ROOT6-GR_R_74_V8_1Apr_RelVal_jht2012D-v1/RAW'
 config.Data.inputDataset   = '/DoubleMuParked/CMSSW_7_4_0_pre9_ROOT6-GR_R_74_V8_1Apr_RelVal_dm2012D-v2/RAW'
-config.Data.splitting   = 'FileBased'
-config.Data.unitsPerJob = 1
+config.Data.splitting   = 'LumiBased'
+config.Data.unitsPerJob = 2
 config.Data.publication = True
 #config.Data.publishDataName = 'mAOD730p1'
 #config.Data.totalUnits = 
