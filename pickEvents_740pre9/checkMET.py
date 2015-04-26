@@ -7,7 +7,10 @@ events = Events(['root://eoscms.cern.ch//store/group/phys_jetmet/schoef/pickEven
 
 
 #edmCollections = [ {'name':'pfMet', 'label':("pfMet"), 'edmType':"vector<reco::PFMET>"} ]
-edmCollections = [ {'name':'pfMet', 'label':("slimmedMETs"), 'edmType':"vector<pat::MET>"} ]
+edmCollections = [ 
+  {'name':'pfMet', 'label':("slimmedMETs"), 'edmType':"vector<pat::MET>"},
+  {'name':'triggerResults', 'label':("TriggerResults","","PAT"), 'edmType':"edm::TriggerResults"},
+   ]
 handles={v['name']:Handle(v['edmType']) for v in edmCollections}
 for i in range(events.size()):
   events.to(i)

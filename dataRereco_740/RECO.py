@@ -26,7 +26,7 @@ process.maxEvents = cms.untracked.PSet(
 # Input source
 process.source = cms.Source("PoolSource",
 #    fileNames = cms.untracked.vstring('file:step3_DIGI2RAW.root'),
-    fileNames = cms.untracked.vstring('root://eoscms.cern.ch//store/group/phys_jetmet/schoef/Run2012D_JetHT_RAW_208352.root'),
+    fileNames = cms.untracked.vstring('root://eoscms.cern.ch//store/group/phys_jetmet/schoef/740pre9_outlier_rereco/Run2012D_JetHT_RAW_208352.root'),
     secondaryFileNames = cms.untracked.vstring()
 )
 
