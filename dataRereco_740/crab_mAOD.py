@@ -10,7 +10,7 @@ config = Configuration()
 config.section_("General")
 #config.General.requestName = "JetHT_CMSSW_7_4_0_pre9_ROOT6-GR_R_74_V8_1Apr_RelVal_jht2012D-v1_ecalCalibNewPFHadCalib_mAOD"
 #config.General.requestName = "JetHT25ns_CMSSW_7_4_0_pre9_ROOT6-GR_R_74_V8_1Apr_RelVal_jht25ns2012D-v2_ecalCalibNewPFHadCalib_mAOD"
-config.General.requestName = "DoubleMuParked_CMSSW_7_4_0_pre9_ROOT6-GR_R_74_V8_1Apr_RelVal_dm2012D-v2_mAOD"
+config.General.requestName = "DoubleMuParked_CMSSW_7_4_0_pre9_ROOT6-GR_R_74_V8_1Apr_RelVal_dm2012D-v2_mAOD_2"
 config.General.workArea = "mAOD"
 config.General.transferOutputs = True #whether to transfer
 config.General.transferLogs = False #1MB still available
