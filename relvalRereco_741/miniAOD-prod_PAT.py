@@ -2,7 +2,7 @@
 # using: 
 # Revision: 1.19 
 # Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
-# with command line options: miniAOD-prod -s PAT --eventcontent MINIAODSIM --runUnscheduled --mc --filein test.root --conditions MCRUN2_74_V9 -n 100 --no_exec
+# with command line options: miniAOD-prod -s PAT --eventcontent MINIAODSIM --runUnscheduled --mc --filein /store/relval/CMSSW_7_4_1/RelValTTbar_13/GEN-SIM-RECO/PU50ns_MCRUN2_74_V8_gensim71X-v1/00000/06ACC5B7-7FEC-E411-8CB1-0025905964BA.root --conditions MCRUN2_74_V8 -n 100 --no_exec
 import FWCore.ParameterSet.Config as cms
 
 process = cms.Process('PAT')
@@ -19,12 +19,14 @@ process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_condDBv2_cff')
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(100)
+    input = cms.untracked.int32(-1)
 )
-
+from files import ZMM_AOD_Method2Thr100fCNoM0NewTimingNegEnergyFix
 # Input source
 process.source = cms.Source("PoolSource",
-    fileNames = cms.untracked.vstring('test.root'),
+#    fileNames = cms.untracked.vstring('/store/relval/CMSSW_7_4_1/RelValTTbar_13/GEN-SIM-RECO/PU50ns_MCRUN2_74_V8_gensim71X-v1/00000/06ACC5B7-7FEC-E411-8CB1-0025905964BA.root'),
+#    fileNames = cms.untracked.vstring('/store/user/kfiekas/HCAL/JetResponse/RelValZMM_13/crab_ZMM_AOD_Method2Thr100fCNoM0NewTiming/150518_071247/0000/ZMM_9.root'),
+    fileNames = cms.untracked.vstring(ZMM_AOD_Method2Thr100fCNoM0NewTimingNegEnergyFix),
     secondaryFileNames = cms.untracked.vstring()
 )
 
@@ -51,7 +53,7 @@ process.MINIAODSIMoutput = cms.OutputModule("PoolOutputModule",
     dropMetaData = cms.untracked.string('ALL'),
     eventAutoFlushCompressedSize = cms.untracked.int32(15728640),
     fastCloning = cms.untracked.bool(False),
-    fileName = cms.untracked.string('miniAOD-prod_PAT.root'),
+    fileName = cms.untracked.string('/afs/cern.ch/work/s/schoef/ZMM_AOD_Method2Thr100fCNoM0NewTimingNegEnergyFix.root'),
     outputCommands = process.MINIAODSIMEventContent.outputCommands,
     overrideInputFileSplitLevels = cms.untracked.bool(True)
 )
@@ -60,7 +62,7 @@ process.MINIAODSIMoutput = cms.OutputModule("PoolOutputModule",
 
 # Other statements
 from Configuration.AlCa.GlobalTag_condDBv2 import GlobalTag
-process.GlobalTag = GlobalTag(process.GlobalTag, 'MCRUN2_74_V9', '')
+process.GlobalTag = GlobalTag(process.GlobalTag, 'MCRUN2_74_V8', '')
 
 # Path and EndPath definitions
 process.endjob_step = cms.EndPath(process.endOfProcess)
