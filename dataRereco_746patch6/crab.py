@@ -11,7 +11,7 @@ config.section_("General")
 config.General.requestName = "JetHT_Run2015B-v1_74X_dataRun2_Prompt_v1_M0"
 config.General.workArea = "reReco"
 config.General.transferOutputs = True #whether to transfer
-config.General.transferLogs = False #1MB still available
+config.General.transferLogs = True #1MB still available
 #config.General.failureLimit =  #0.1 or 10% (which?) fraction of tolerated failures
 
 config.section_("JobType")

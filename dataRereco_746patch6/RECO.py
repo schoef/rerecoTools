@@ -20,12 +20,12 @@ process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_condDBv2_cff')
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(10)
+    input = cms.untracked.int32(20)
 )
 
 # Input source
 process.source = cms.Source("PoolSource",
-    fileNames = cms.untracked.vstring('root://eoscms.cern.ch//store/data/Run2015B/JetHT/RAW/v1/000/251/161/00000/3686240A-0925-E511-A01E-02163E0137CC.root'),
+    fileNames = cms.untracked.vstring('root://eoscms.cern.ch//store/data/Run2015B/JetHT/RAW/v1/000/251/162/00000/52BAC7C1-AD25-E511-B5ED-02163E01358B.root'),
     secondaryFileNames = cms.untracked.vstring()
 )
 
