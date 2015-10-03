@@ -10,6 +10,7 @@ config = Configuration()
 config.section_("General")
 #config.General.requestName   = 'JetHT25ns_CMSSW_7_4_0_pre9_ROOT6-GR_R_74_V8_1Apr_RelVal_jht25ns2012D-v2_ecalCalibNewPFHadCalib_AOD'
 #config.General.requestName   = 'JetHT_CMSSW_7_4_0_pre9_ROOT6-GR_R_74_V8_1Apr_RelVal_jht2012D-v1_ecalCalibNewPFHadCalib_AOD'
+#config.General.requestName   = 'JetHT_Run2015D-v1_257599'
 config.General.requestName   = 'JetHT_Run2015D-v1_257599_HFFix'
 
 config.General.workArea = "reReco"
@@ -19,7 +20,7 @@ config.General.transferLogs = False #1MB still available
 
 config.section_("JobType")
 config.JobType.pluginName = 'Analysis'
-config.JobType.psetName   = 'RECO.py'
+config.JobType.psetName   = 'RunPromptRecoCfg.py'
 #config.JobType.inputFiles = ['PFCalibration.db']
 #config.JobType.allowNonProductionCMSSW = True
 #config.JobType.pyCfgParams   = [ 'keep=*_genMetTrue_*_*,*_pfMet_*_*,*_packedPFCandidates_*_*,*_prunedGenParticles_*_*,*_packedGenParticles_*_*', 'GT=POSTLS170_V6::All']
@@ -31,7 +32,7 @@ config.Data.inputDataset   = '/JetHT/Run2015D-v1/RAW'
 config.Data.splitting   = 'LumiBased'
 #config.Data.unitsPerJob = 1
 config.Data.unitsPerJob = 4
-config.Data.lumiMask = 257599.json
+config.Data.lumiMask = '257599.json'
 config.Data.publication = True
 #config.Data.publishDataName = 'mAOD730p1'
 #config.Data.totalUnits = 
