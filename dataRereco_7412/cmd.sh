@@ -1,0 +1,1 @@
+python $CMSSW_RELEASE_BASE/src/Configuration/DataProcessing/test/RunPromptReco.py --scenario ppRun2 --reco --aod --miniaod --dqmio --global-tag 74X_dataRun2_Prompt_v1 --lfn=/store/data/Run2015B/SingleMuon/RAW/v1/000/252/116/00000/A403ACE8-8F2E-E511-B3D6-02163E0138B3.root --alcareco TkAlMinBias
