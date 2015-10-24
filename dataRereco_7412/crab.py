@@ -8,14 +8,12 @@ config = Configuration()
 
 
 config.section_("General")
-#config.General.requestName   = 'JetHT25ns_CMSSW_7_4_0_pre9_ROOT6-GR_R_74_V8_1Apr_RelVal_jht25ns2012D-v2_ecalCalibNewPFHadCalib_AOD'
-#config.General.requestName   = 'JetHT_CMSSW_7_4_0_pre9_ROOT6-GR_R_74_V8_1Apr_RelVal_jht2012D-v1_ecalCalibNewPFHadCalib_AOD'
-#config.General.requestName   = 'JetHT_Run2015D-v1_257599'
-config.General.requestName   = 'JetHT_Run2015D-v1_257599_HFFix'
+#config.General.requestName   = 'JetHT_Run2015D-v1_257599_HFFix'
+config.General.requestName   = 'JetHT_Run2015D-v1_257599_NEF'
 
 config.General.workArea = "reReco"
 config.General.transferOutputs = True #whether to transfer
-config.General.transferLogs = False #1MB still available
+config.General.transferLogs = True #1MB still available
 #config.General.failureLimit =  #0.1 or 10% (which?) fraction of tolerated failures
 
 config.section_("JobType")
@@ -29,13 +27,12 @@ config.section_("Data")
 config.Data.publishDBS = 'phys03'
 config.Data.inputDataset   = '/JetHT/Run2015D-v1/RAW'
 
-config.Data.splitting   = 'LumiBased'
-#config.Data.unitsPerJob = 1
-config.Data.unitsPerJob = 4
+config.Data.splitting   = 'EventAwareLumiBased'
+config.Data.unitsPerJob = 10
 config.Data.lumiMask = '257599.json'
 config.Data.publication = True
 #config.Data.publishDataName = 'mAOD730p1'
 #config.Data.totalUnits = 
 config.section_("Site")
 config.Site.storageSite = 'T2_AT_Vienna'
-
+#config.Site.storageSite = 'T2_CH_CERN'
