@@ -11,10 +11,11 @@ config.section_("General")
 #config.General.requestName = "QCD_Pt-15to7000_AllChlgoodAsymptFlat0to50bx25_74X_mcRun2_asymptotic_AllChannelsGood_v0-v2_RunIISpring15MiniAODv2-74X"
 #config.General.requestName = "QCD_Pt-15to7000_AllChlgoodAsymptNoPUbx25_74X_mcRun2_asymptotic_AllChannelsGood_v0-v2_RunIISpring15MiniAODv2-74X"
 #config.General.requestName = "QCD_Pt-15to7000_AsymptFlat0to50bx25Reco_MCRUN2_74_V9-v3_RunIISpring15MiniAODv2-74X"
-config.General.requestName = "QCD_Pt-15to7000_AsymptNoPUbx25Reco_MCRUN2_74_V9-v3_RunIISpring15MiniAODv2-74X"
+#config.General.requestName = "QCD_Pt-15to7000_AsymptNoPUbx25Reco_MCRUN2_74_V9-v3_RunIISpring15MiniAODv2-74X"
+config.General.requestName = "SMS-T2tt_mStop-500_mLSP-325_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_RunIISpring15MiniAODv2-74X"
 config.General.workArea = "mAOD"
 config.General.transferOutputs = True #whether to transfer
-config.General.transferLogs = False #1MB still available
+config.General.transferLogs = True #1MB still available
 #config.General.failureLimit =  #0.1 or 10% (which?) fraction of tolerated failures
 
 config.section_("JobType")
@@ -28,7 +29,9 @@ config.Data.publishDBS = 'phys03'
 #config.Data.inputDataset = '/QCD_Pt-15to7000_TuneCUETP8M1_Flat_13TeV_pythia8/RunIISpring15DR74-AllChlgoodAsymptFlat0to50bx25_74X_mcRun2_asymptotic_AllChannelsGood_v0-v2/AODSIM'
 #config.Data.inputDataset = '/QCD_Pt-15to7000_TuneCUETP8M1_Flat_13TeV_pythia8/RunIISpring15DR74-AllChlgoodAsymptNoPUbx25_74X_mcRun2_asymptotic_AllChannelsGood_v0-v2/AODSIM'
 #config.Data.inputDataset = '/QCD_Pt-15to7000_TuneCUETP8M1_Flat_13TeV_pythia8/RunIISpring15DR74-AsymptFlat0to50bx25Reco_MCRUN2_74_V9-v3/GEN-SIM-RECO'
-config.Data.inputDataset = '/QCD_Pt-15to7000_TuneCUETP8M1_Flat_13TeV_pythia8/RunIISpring15DR74-AsymptNoPUbx25Reco_MCRUN2_74_V9-v3/GEN-SIM-RECO'
+#config.Data.inputDataset = '/QCD_Pt-15to7000_TuneCUETP8M1_Flat_13TeV_pythia8/RunIISpring15DR74-AsymptNoPUbx25Reco_MCRUN2_74_V9-v3/GEN-SIM-RECO'
+#config.Data.inputDataset = '/SMS-T2tt_mStop-850_mLSP-100_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISpring15DR74-Asympt25ns_MCRUN2_74_V9-v1/AODSIM'
+config.Data.inputDataset = '/SMS-T2tt_mStop-500_mLSP-325_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISpring15DR74-Asympt25ns_MCRUN2_74_V9-v1/AODSIM'
 config.Data.splitting   = 'FileBased'
 config.Data.unitsPerJob = 3
 config.Data.publication = True
