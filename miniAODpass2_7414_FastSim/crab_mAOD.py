@@ -8,8 +8,8 @@ config = Configuration()
 
 
 config.section_("General")
-#config.General.requestName = "SMS-T2tt_mStop-300to375_mLSP-1to300_RunIISpring15MiniAODv2"
-config.General.requestName = "SMS-T2tt_mStop-150-175_mLSP-1to100_RunIISpring15MiniAODv2"
+config.General.requestName = "SMS-T2tt_mStop-300to375_mLSP-1to300_RunIISpring15MiniAODv2_2"
+#config.General.requestName = "SMS-T2tt_mStop-150-175_mLSP-1to100_RunIISpring15MiniAODv2_2"
 config.General.workArea = "mAOD"
 config.General.transferOutputs = True #whether to transfer
 config.General.transferLogs = True #1MB still available
@@ -23,10 +23,10 @@ config.JobType.psetName   = 'miniAOD.py'
 config.section_("Data")
 #config.Data.inputDBS = 'phys03'
 config.Data.publishDBS = 'phys03'
-#config.Data.inputDataset = '/SMS-T2tt_mStop-300to375_mLSP-1to300_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISpring15FSPremix-MCRUN2_74_V9-v2/AODSIM'
-config.Data.inputDataset = '/SMS-T2tt_mStop-150-175_mLSP-1to100_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISpring15FSPremix-MCRUN2_74_V9-v1/AODSIM'
+config.Data.inputDataset = '/SMS-T2tt_mStop-300to375_mLSP-1to300_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISpring15FSPremix-MCRUN2_74_V9-v2/AODSIM'
+#config.Data.inputDataset = '/SMS-T2tt_mStop-150-175_mLSP-1to100_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISpring15FSPremix-MCRUN2_74_V9-v1/AODSIM'
 config.Data.splitting   = 'FileBased'
-config.Data.unitsPerJob = 3
+config.Data.unitsPerJob = 1
 config.Data.publication = True
 #config.Data.publishDataName = 'mAOD730p1'
 #config.Data.totalUnits = 
