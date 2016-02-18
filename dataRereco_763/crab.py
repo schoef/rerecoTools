@@ -2,15 +2,17 @@ from WMCore.Configuration import Configuration
 config = Configuration()
 
 config.section_("General")
-config.General.requestName = "JetHT_Run2015D_M2_5_500"
+config.General.requestName = "JetHT_Run2015D_lumiBased_reduced"
 config.General.workArea = "dataRereco"
 config.General.transferOutputs = True #whether to transfer
 #config.General.failureLimit =  #0.1 or 10% (which?) fraction of tolerated failures
 config.General.transferLogs = True
 config.section_("JobType")
 config.JobType.pluginName = 'Analysis'
-config.JobType.psetName   = 'reco_Run2015D_JetHT_M2_5_500.py'
-config.JobType.maxMemoryMB = 2300
+config.JobType.psetName   = 'RECO_RAW2DIGI_L1Reco_RECO_ALCA_EI_PAT_DQM_M2.py'
+#config.JobType.psetName   = 'RECO_RAW2DIGI_L1Reco_RECO_ALCA_EI_PAT_DQM_M2_5_500.py'
+config.JobType.outputFiles = ['RECO_RAW2DIGI_L1Reco_RECO_ALCA_EI_PAT_DQM.root']
+config.JobType.maxMemoryMB = 2500
 #config.JobType.allowNonProductionCMSSW = True
 #config.JobType.pyCfgParams   = [ 'keep=*_genMetTrue_*_*,*_pfMet_*_*,*_packedPFCandidates_*_*,*_prunedGenParticles_*_*,*_packedGenParticles_*_*', 'GT=POSTLS170_V6::All']
 config.section_("Data")
