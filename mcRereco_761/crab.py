@@ -2,14 +2,19 @@ from WMCore.Configuration import Configuration
 config = Configuration()
 
 config.section_("General")
-config.General.requestName = "QCD_Pt-15to3000_TuneCUETP8M1_Flat_13TeV_pythia8_RunIISummer15GS-MCRUN2_71_V1-v1_M2_5_500"
+#config.General.requestName = "QCD_Pt-15to3000_TuneCUETP8M1_Flat_13TeV_pythia8_RunIISummer15GS-MCRUN2_71_V1-v1_M0"
+#config.General.requestName = "QCD_Pt-15to3000_TuneCUETP8M1_Flat_13TeV_pythia8_RunIISummer15GS-MCRUN2_71_V1-v1_M21p"
+config.General.requestName = "QCD_Pt-15to3000_TuneCUETP8M1_Flat_13TeV_pythia8_RunIISummer15GS-MCRUN2_71_V1-v1_M23p"
 config.General.workArea = "mcRereco"
 config.General.transferOutputs = True #whether to transfer
 #config.General.failureLimit =  #0.1 or 10% (which?) fraction of tolerated failures
 config.General.transferLogs = True
 config.section_("JobType")
 config.JobType.pluginName = 'Analysis'
-config.JobType.psetName   = 'aodsim_M2_5_500.py'
+#config.JobType.psetName   = 'aodsim_M2_5_500.py'
+#config.JobType.psetName   = 'aodsim_M0.py'
+#config.JobType.psetName   = 'aodsim_M21p.py'
+config.JobType.psetName   = 'aodsim_M23p.py'
 config.JobType.maxMemoryMB = 2300
 #config.JobType.allowNonProductionCMSSW = True
 #config.JobType.pyCfgParams   = [ 'keep=*_genMetTrue_*_*,*_pfMet_*_*,*_packedPFCandidates_*_*,*_prunedGenParticles_*_*,*_packedGenParticles_*_*', 'GT=POSTLS170_V6::All']
