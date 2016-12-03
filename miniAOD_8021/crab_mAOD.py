@@ -9,7 +9,7 @@ config = Configuration()
 
 config.section_("General")
 #config.General.requestName = "QCD_Pt-15to7000_AllChlgoodAsymptFlat0to50bx25_74X_mcRun2_asymptotic_AllChannelsGood_v0-v2_RunIISpring15MiniAODv2-74X"
-config.General.requestName = "QCD_Pt-15to7000_PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1"
+config.General.requestName = "QCD_Pt-15to7000_PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1_3"
 config.General.workArea = "mAOD"
 config.General.transferOutputs = True #whether to transfer
 config.General.transferLogs = True #1MB still available
@@ -26,9 +26,9 @@ config.Data.allowNonValidInputDataset = True
 config.Data.publishDBS = 'phys03'
 config.Data.inputDataset = '/QCD_Pt-15to7000_TuneCUETP8M1_FlatP6_13TeV_pythia8/RunIISummer16DR80Premix-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/AODSIM'
 config.Data.splitting   = 'FileBased'
-config.Data.unitsPerJob = 3
+config.Data.unitsPerJob = 1
 config.Data.publication = True
-config.Data.outputDatasetTag = 'mAOD8021'
+config.Data.outputDatasetTag = 'mAOD8021_2'
 #config.Data.totalUnits = 
 config.section_("Site")
 config.Site.storageSite = 'T2_AT_Vienna'
